@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+path {
+    fill: currentColor !important;
+}
 :root{
     --white: #fff;
     --blue: #29abe2;
@@ -502,6 +505,7 @@ Responsive HOME
     padding-bottom: 2.5rem;
 }
 .services-box{
+    transition: .5s all;
     grid-column: span 2;
     height: 200px;
     border-radius: .5rem;
@@ -509,6 +513,8 @@ Responsive HOME
     backdrop-filter: blur(2px);
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 .services-box > h1{
     text-align: center;
@@ -518,11 +524,30 @@ Responsive HOME
     line-height: 30px;
     color: var(--white);
     padding: 1rem;
+    transition: .5s all;
 }
-
+.services-box h1 span{
+    transition: .5s,background-position 0s;
+    color: #29abe2;
+    transition: .5s all;
+}
 .text-grid{
     width: 100%;
 }
+.services-box img{
+    width: 80px;
+}
+.services-box:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.services-box:hover h1{
+    color: var(--blue);
+}
+.services-box:hover span{
+    color: var(--white);
+}
+
 /*
 ------------------------------------------------
 Responsive SERVICES 
