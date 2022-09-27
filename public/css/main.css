@@ -1,0 +1,436 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --white: #fff;
+    --blue: #29abe2;
+    --deep-blue: #211a4e;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+body::-webkit-scrollbar {
+    width: 8px;              
+}
+body::-webkit-scrollbar-track {
+background: var(--white);       
+}
+body::-webkit-scrollbar-thumb {
+background-color: #000;   
+}
+/* ------------- */
+a{
+    text-decoration: none;
+    color: #eee;
+    font-size: 18px;
+}
+ul{
+    list-style-type: none;
+}
+
+
+/* 
+------------------------------------------------------
+HEADER
+------------------------------------------------------
+*/
+
+.desktop-logo img,
+.mobile-logo img{
+    width: 60px;
+    vertical-align: middle;
+}
+.header{
+    min-width: 100%;
+    position: absolute;
+    z-index: 2;
+    background: #000;
+    height: auto;
+    padding: 1.5rem 0rem 1.5rem 0rem;
+    border-bottom: var(--blue) 3px solid;
+    animation: border-color;
+    animation-timing-function: ease-in;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+    animation-iteration-count: infinite;
+}
+/* Border Animation */
+@keyframes border-color {
+    0%{
+        border-bottom: var(--blue) 3px solid;
+    }
+    50%{
+        border-bottom: #fff 3px solid;
+    }
+    100%{
+        border-bottom: var(--blue) 3px solid;
+    }
+}
+
+/* 
+-------------
+Desktop
+-------------
+*/
+
+.navbar-desktop{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.desktop-link{
+    display: flex;
+    gap: 20px;
+} 
+.desktop-link .link .item{
+    transition: .5s;
+    padding: .5rem;
+}
+ul:hover li a{
+    transform: scale(1.5);
+    opacity: 0.2;
+    filter: blur(5px);
+}
+ul li a:hover{
+    opacity: 1;
+    filter: blur(0);
+}
+ul li a:before{
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--blue);
+    border-radius: 1rem;
+    transition: .5s;
+    transform: scaleX(0);
+    z-index: -1;
+}   
+ul li a:hover:before{
+    transition: transform 0.5s;
+    transform:scaleX(1);
+}
+
+
+/* Ajust header spacing */
+@media screen and (max-width: 1110px) {
+
+    .navbar-desktop{
+        justify-content: space-between;
+    }
+    .header{
+        padding: 1.5rem 2.5rem;
+    }
+
+}
+
+/* 
+----------------
+Mobile Menu
+----------------
+*/
+
+.navbar-mobile{
+    display: none;
+} 
+.mobile-open{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: flex-end;
+}
+.mobile-menu{
+    display: none;
+}
+.mobile-link{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    gap: 15px;
+}
+.link{
+    text-align: center;
+}  
+.toggle{
+    display: flex;
+}
+.toggle img{
+    width: 35px;
+}
+
+@media screen and (max-width: 750px) {
+    /* Hidden Desktop Show Mobile*/
+    .navbar-desktop{
+        display: none;
+    }
+    .navbar-mobile{
+        display: block;
+    }
+}
+
+
+
+/* 
+------------------------------------------------------
+Home Content
+------------------------------------------------------
+*/
+
+
+.home-content{
+    width: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(33,26,78,1) 100%);
+    position: relative;
+    width: 100%;
+    height: 850px;
+    display: grid;
+    grid-template-rows: repeat(10, 56.6px);
+    grid-template-columns: repeat(15, 1fr);
+}
+.home-radius{
+    width: 600px;
+    height: 600px;
+    grid-column: 14;
+    grid-row: 4; 
+}
+.home-img{
+    width: 100%;
+    height: 100%;
+    background: var(--blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    animation-name: radius-effect;
+    animation-timing-function: ease-in-out;
+    animation-duration: 9.7s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+    overflow: hidden;
+}
+.home-img img{
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    width: 93%;
+    height: 93%;
+    animation-name: radius-effect;
+    animation-timing-function: ease-in-out;
+    animation-duration: 9.9s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+} 
+/* Radius Animation */
+@keyframes radius-effect {
+    0%{
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50%{
+        border-radius: 30% 60% 70% 40% / 50% 60%;
+    }
+    75%{
+        border-radius: 50% 60% 40% 35% / 30% 50%;       
+    }
+}
+
+/*
+-----------------------TEXT HOME---------------------- 
+*/
+
+.home-text{
+    margin: 1rem;
+    grid-column: 2/12;
+    grid-row: 6;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+.text{
+    width: 90%;
+    height: auto;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;    
+}
+.text p,
+.text h1{
+    color: #eee;   
+}
+.home-text .text h1{
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 50px;
+}
+.home-text .text p{
+    line-height: 27px;
+    font-size: 16px;
+}
+.text .text-circle{
+    position: relative;
+    z-index: 1;
+}
+.text .text-circle::before{
+    content: '';
+    position: absolute;
+    top: 0;left: 0;bottom: 0;right: 0;
+    width: 100px;
+    height: 100px;
+    transform: translateX(-25%);
+    background: var(--blue);
+    z-index: -1;
+
+    border-radius:  40% 50% 50% 60% / 40% 60%;
+    animation-name: radius-effect-circle;
+    animation-timing-function: ease-in-out;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+@keyframes radius-effect-circle {
+    0%{
+        border-radius:  40% 20% 50% 60% / 20% 60%;
+    }
+    50%{
+        border-radius:  40% 70% 50% 80% / 80% 30% 40% 60%;
+    }
+    75%{
+        border-radius: 60% 30% 80% 30% / 50% 60%;       
+    }
+}
+.home-content .btn-a{
+    text-align: center;
+    padding: .2rem;
+    width: 200px;
+    border-radius: 1rem;
+    background: var(--blue);
+    color: var(--white);
+    font-size: 25px;
+    transition: .7s, background-position .5s;
+}
+.btn-a:hover {
+    width: 100%;
+    background-position: right;
+}
+
+/*
+------------------------------------------------
+responsive HOME 
+------------------------------------------------
+*/
+@media screen and (max-width: 1150px) {
+    .home-radius{  
+        width: 580px;
+        height: 580px;
+        grid-column: 11;
+        grid-row: 4;
+    }
+    .text{
+        width: 100%;
+    }
+    
+    .home-text{
+        grid-column: 2/9;
+        grid-row: 6;
+    }
+}
+@media screen and (max-width: 1110px) {
+    .home-radius{  
+        width: 550px;
+        height: 550px;
+        grid-column: 11;
+        grid-row: 4;
+    }
+    .home-text{
+        grid-column: 2/9;
+        grid-row: 5;
+    }
+
+}
+@media screen and (max-width: 1165px) {
+    .home-radius{  
+        width: 500px;
+        height: 500px;
+        grid-column: 8;
+        grid-row: 8;
+    }
+    .home-text{
+        text-align: center;
+        grid-column: 2/15;
+        grid-row: 4;
+    }
+    .text .text-circle::before{
+        display: none;
+    }
+    .home-text{
+        align-items: center;
+    }
+    .btn-a:hover {
+        width: 200px;
+    }
+    .home-content{
+        height: 1100px;
+        grid-template-rows: repeat(15, 73.3px);
+    }
+}
+@media screen and (max-width: 660px) {
+    .home-radius{  
+        width: 400px;
+        height: 400px;
+        grid-column: 8;
+        grid-row: 12;
+    }
+    .home-text{
+        text-align: center;
+        grid-column: 2/15;
+        grid-row: 4;
+    }
+    .home-content{
+        height: 1000px;
+        grid-template-rows: repeat(10, 56.6px);
+        grid-template-columns: repeat(15, 1fr);
+    }
+}
+@media screen and (max-width: 500px) {
+    .home-radius{  
+        width: 400px;
+        height: 400px;
+        grid-column: 8;
+        grid-row: 13;
+    }
+    .home-text{
+        grid-column: 2/15;
+        grid-row: 4;
+    }
+}
+@media screen and (max-width: 415px) {
+    .home-radius{  
+        width: 330px;
+        height: 330px;
+        grid-column: 8;
+        grid-row: 13;
+    }
+}
+@media screen and (max-width: 360px) {
+    .home-text{
+        grid-column: 2/15;
+        grid-row: 3;
+    }
+    .home-radius{  
+        width: 280px;
+        height: 280px;
+        grid-column: 8;
+        grid-row: 15;
+    }
+}
+
+/*
+-----------------------
+-----------------END----------------------
+-----------------------
+*/
+
+
+
