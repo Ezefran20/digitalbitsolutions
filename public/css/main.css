@@ -8,6 +8,9 @@
     --blue: #29abe2;
     --deep-blue: #211a4e;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-family: 'Poppins', sans-serif;
 }
@@ -21,6 +24,7 @@ body::-webkit-scrollbar-thumb {
 background-color: #000;   
 }
 /* ------------- */
+
 a{
     text-decoration: none;
     color: #eee;
@@ -29,7 +33,15 @@ a{
 ul{
     list-style-type: none;
 }
-
+h1{
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 60px;
+}
+p{
+    line-height: 30px;
+    font-size: 17px;
+}
 
 /* 
 ------------------------------------------------------
@@ -259,15 +271,15 @@ Home Content
 .text h1{
     color: #eee;   
 }
-.home-text .text h1{
-    font-size: 50px;
+/* .home-text .text h1{
+    font-size: 65px;
     font-weight: 500;
-    line-height: 50px;
+    line-height: 60px;
 }
 .home-text .text p{
-    line-height: 27px;
-    font-size: 16px;
-}
+    line-height: 30px;
+    font-size: 17px;
+} */
 .text .text-circle{
     position: relative;
     z-index: 1;
@@ -276,8 +288,8 @@ Home Content
     content: '';
     position: absolute;
     top: 0;left: 0;bottom: 0;right: 0;
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
     transform: translateX(-25%);
     background: var(--blue);
     z-index: -1;
@@ -317,44 +329,18 @@ Home Content
 
 /*
 ------------------------------------------------
-responsive HOME 
+Responsive HOME 
 ------------------------------------------------
 */
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1165px) {
     .home-radius{  
         width: 580px;
         height: 580px;
-        grid-column: 11;
-        grid-row: 4;
+        grid-column: 8;
+        grid-row: 8;
     }
     .text{
         width: 100%;
-    }
-    
-    .home-text{
-        grid-column: 2/9;
-        grid-row: 6;
-    }
-}
-@media screen and (max-width: 1110px) {
-    .home-radius{  
-        width: 550px;
-        height: 550px;
-        grid-column: 11;
-        grid-row: 4;
-    }
-    .home-text{
-        grid-column: 2/9;
-        grid-row: 5;
-    }
-
-}
-@media screen and (max-width: 1165px) {
-    .home-radius{  
-        width: 500px;
-        height: 500px;
-        grid-column: 8;
-        grid-row: 8;
     }
     .home-text{
         text-align: center;
@@ -364,6 +350,9 @@ responsive HOME
     .text .text-circle::before{
         display: none;
     }
+    .services-text .text-circle::before{
+        display: none;
+    }
     .home-text{
         align-items: center;
     }
@@ -371,11 +360,27 @@ responsive HOME
         width: 200px;
     }
     .home-content{
-        height: 1100px;
+        height: 1200px;
         grid-template-rows: repeat(15, 73.3px);
+    } 
+}
+@media screen and (max-width: 1110px) {
+    .home-radius{  
+        width: 550px;
+        height: 550px;
+        grid-column: 8;
+        grid-row: 9;
     }
+    .home-text{
+        grid-column: 2/15;
+        grid-row: 3;
+    }
+
 }
 @media screen and (max-width: 660px) {
+    h1{
+        font-size: 45px;
+    }
     .home-radius{  
         width: 400px;
         height: 400px;
@@ -388,7 +393,7 @@ responsive HOME
         grid-row: 4;
     }
     .home-content{
-        height: 1000px;
+        height: 1100px;
         grid-template-rows: repeat(10, 56.6px);
         grid-template-columns: repeat(15, 1fr);
     }
@@ -410,7 +415,7 @@ responsive HOME
         width: 330px;
         height: 330px;
         grid-column: 8;
-        grid-row: 13;
+        grid-row: 15;
     }
 }
 @media screen and (max-width: 360px) {
@@ -431,6 +436,120 @@ responsive HOME
 -----------------END----------------------
 -----------------------
 */
+.h1-translate{
+    display: block;
+}
+.services-content{
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(4, minmax(110px, auto));
+    position: relative;
+    background: rgba(0, 0, 0, .6);
+}
+.services-content::before{
+    content: '';
+    top: 0;left: 0;right: 0;bottom: 0;
+    position: absolute;
+    background-image: url(/public/img/bg.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+.services-text{
+    margin-top: 2rem;
+    margin-left: -1.4rem;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    grid-column: 2/12;
+    grid-row: 1;
+}
+.services-text .text-circle{
+    position: relative;
+    z-index: 1;
+}
+.services-text .text-circle::before{
+    content: '';
+    position: absolute;
+    top: 0;left: 0;bottom: 0;right: 0;
+    width: 130px;
+    height: 130px;
+    background: var(--blue);
+    transform: translateX(-20%);
+    z-index: -1;
+    border-radius:  40% 50% 50% 60% / 40% 60%;
+    animation-name: radius-effect-circle;
+    animation-timing-function: ease-in-out;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+.services-text h1{
+    color: var(--white);
+}
+.services-grid{
+    z-index: 1;
+    grid-row: 3;
+    grid-column: 2/15;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2.5rem;
+}
+.services-box{
+    grid-column: span 2;
+    height: 200px;
+    border-radius: .5rem;
+    background-color: rgba(33,26,78,.5);
+    backdrop-filter: blur(2px);
+    display: flex;
+    align-items: center;
+}
+.services-box > h1{
+    text-align: center;
+    margin: 0 auto;
+    font-size: 25px !important;
+    font-weight: 400;
+    line-height: 30px;
+    color: var(--white);
+    padding: 1rem;
+}
+
+.text-grid{
+    width: 100%;
+}
+/*
+------------------------------------------------
+Responsive SERVICES 
+------------------------------------------------
+*/
 
 
+@media screen and (max-width: 1165px) {
+    
+    .h1-translate{
+        display: contents;
+    }
+    h1{
+        line-height: 50px;
+    }
+    .services-text{
+        grid-column: 2/15;
+        margin-left: -0rem;
+        text-align: center;
+    }
+    .services-grid{
+        margin-top: -1.5rem;
+    }
+}
 
+/*
+-----------------------
+-----------------END----------------------
+-----------------------
+*/
