@@ -188,7 +188,6 @@ Mobile Menu
 }
 
 
-
 /* 
 ------------------------------------------------------
 Home Content
@@ -439,6 +438,7 @@ Responsive HOME
 -----------------END----------------------
 -----------------------
 */
+
 .h1-translate{
     display: block;
 }
@@ -470,11 +470,11 @@ Responsive HOME
     grid-column: 2/12;
     grid-row: 1;
 }
-.services-text .text-circle{
+.text-circle{
     position: relative;
     z-index: 1;
 }
-.services-text .text-circle::before{
+.text-circle::before{
     content: '';
     position: absolute;
     top: 0;left: 0;bottom: 0;right: 0;
@@ -554,7 +554,6 @@ Responsive SERVICES
 ------------------------------------------------
 */
 
-
 @media screen and (max-width: 1165px) {
     
     .h1-translate{
@@ -578,3 +577,15 @@ Responsive SERVICES
 -----------------END----------------------
 -----------------------
 */
+
+
+/* 
+------------------------------------------------------
+Projects Content
+------------------------------------------------------
+*/
+
+
+.projects-content{
+    
+}
