@@ -3,8 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-path {
-    fill: currentColor !important;
+@font-face {
+    font-family: 'Blade Runner Movie Font';
+    src: url('/public/fonts/BLADRMF_.TTF');
 }
 :root{
     --white: #fff;
@@ -28,6 +29,33 @@ background-color: #000;
 }
 /* ------------- */
 
+.btn-whatsapp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 9;
+    background: #3ec315;
+    bottom: 0;
+    right: 0;
+    margin: 4.5rem;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+.btn-whatsapp:hover{
+    cursor: pointer;
+}
+h3{
+    color: #eee;
+    font-size: 18px;
+    font-weight: 400;
+}
+h2{
+    color: #eee;    
+    font-size: 20px;
+    font-weight: 500;
+}
 a{
     text-decoration: none;
     color: #eee;
@@ -40,10 +68,12 @@ h1{
     font-size: 60px;
     font-weight: 500;
     line-height: 60px;
+    color: #eee;   
 }
 p{
     line-height: 30px;
     font-size: 17px;
+    color: #eee;   
 }
 
 /* 
@@ -52,10 +82,11 @@ HEADER
 ------------------------------------------------------
 */
 
-.desktop-logo img,
-.mobile-logo img{
-    width: 60px;
-    vertical-align: middle;
+.desktop-logo h1,
+.mobile-logo h1{
+    font-size: 45px;
+    user-select: none;
+    font-family: 'Blade Runner Movie Font';
 }
 .header{
     min-width: 100%;
@@ -169,9 +200,6 @@ Mobile Menu
 }
 .link{
     text-align: center;
-}  
-.toggle{
-    display: flex;
 }
 .toggle img{
     width: 35px;
@@ -211,6 +239,7 @@ Home Content
     height: 600px;
     grid-column: 14;
     grid-row: 4; 
+
 }
 .home-img{
     width: 100%;
@@ -262,6 +291,8 @@ Home Content
     gap: 20px;
     flex-direction: column;
 }
+.text-projects,
+.text-grid,
 .text{
     width: 90%;
     height: auto;
@@ -269,19 +300,7 @@ Home Content
     gap: 20px;
     flex-direction: column;    
 }
-.text p,
-.text h1{
-    color: #eee;   
-}
-/* .home-text .text h1{
-    font-size: 65px;
-    font-weight: 500;
-    line-height: 60px;
-}
-.home-text .text p{
-    line-height: 30px;
-    font-size: 17px;
-} */
+
 .text .text-circle{
     position: relative;
     z-index: 1;
@@ -314,7 +333,7 @@ Home Content
         border-radius: 60% 30% 80% 30% / 50% 60%;       
     }
 }
-.home-content .btn-a{
+.btn-a{
     text-align: center;
     padding: .2rem;
     width: 200px;
@@ -562,7 +581,8 @@ Responsive SERVICES
     h1{
         line-height: 50px;
     }
-    .services-text{
+    .services-text,
+    .text{
         grid-column: 2/15;
         margin-left: -0rem;
         text-align: center;
@@ -571,6 +591,7 @@ Responsive SERVICES
         margin-top: -1.5rem;
     }
 }
+
 
 /*
 -----------------------
@@ -585,7 +606,84 @@ Projects Content
 ------------------------------------------------------
 */
 
+.contact{
+    width: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(33,26,78,1) 100%);
+    height: 1650px;
+    display: grid;
+    grid-template-rows: 56.6px repeat(14, 100px) ;
+    grid-template-columns: repeat(15, 1fr);
+}
+.contact-text{
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    grid-column: 3/12;
+    grid-row: 2;
+}
+.contact-info{
+    grid-column: 8;
+    grid-row: 8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.info-text h2{
+    font-size: 25px;
+    color: #eee;
+    margin-bottom: 1.5rem;
+}
+.info-text h2 span{
+    color: var(--blue);
+    font-size: 18px;
+}
+.info-grid{
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.info-box img{
+    width: 80px;
+    animation-name: moveIcon;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+    animation-play-state: running;
+}
+@keyframes moveIcon {
+    0% {transform: translateY(0%);}
+    50% {transform: translateY(-20%);} 
+}
 
-.projects{
-    
+.info-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.info-footer a{
+    width: 250px !important;
+}
+.contact-illustration{
+    margin-top: 3.5rem;
+    grid-row: 15;
+    grid-column: 8;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 100px;
+    text-align: center;
+}
+.contact-illustration img{
+    width: 500px;
+} 
+
+.contact .text-circle::before{
+    width: 110px;
+    height: 70px;
 }
