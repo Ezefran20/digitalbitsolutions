@@ -916,6 +916,9 @@ About US
         grid-column: 2/15;
         grid-row: 10;
     }
+    .footer-contact a{
+        font-size: 16px;
+    }
 }
 @media screen and  (max-width: 325px ) {
     .aboutus-content{
