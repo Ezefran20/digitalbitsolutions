@@ -478,7 +478,8 @@ Responsive HOME
     background-repeat: no-repeat;
     z-index: -1;
 }
-.services-text{
+.services-text,
+.aboutus-text{
     margin-top: 2rem;
     margin-left: -1.4rem;
     z-index: 1;
@@ -615,8 +616,8 @@ Projects Content
     grid-row: 2;
 }
 .contact .text-circle::before{
-    width: 100px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
 }
 .contact-info{
     width: 100%;
@@ -802,7 +803,22 @@ About US
 -----------------------------------------------------------------------------
 */
 
-
+.aboutus-text .text-circle::before{
+    content: '';
+    position: absolute;
+    top: 0;left: 0;bottom: 0;right: 0;
+    width: 80px;
+    height: 80px;
+    background: var(--blue);
+    transform: translateX(-20%);
+    z-index: -1;
+    border-radius:  40% 50% 50% 60% / 40% 60%;
+    animation-name: radius-effect-circle;
+    animation-timing-function: ease-in-out;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
 
 
 
