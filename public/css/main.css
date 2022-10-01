@@ -29,7 +29,6 @@ background-color: #000;
 }
 /* ------------- */
 
-
 .btn-whatsapp img{
     width: 60px;
     height: auto;
@@ -39,8 +38,6 @@ background-color: #000;
     right: 0;
     margin: 3.5%;
 }
-
-
 h3{
     color: #eee;
     font-size: 18px;
@@ -845,6 +842,8 @@ FOOTER
 }
 .footer-nav ul li a{
     color: #000;
+    font-size: 20px;
+    font-weight: 500;
 }
 .footer-logo{
     background: #000;
@@ -858,7 +857,7 @@ FOOTER
     animation-name: footerIcon;
     color: var(--blue);
     animation-timing-function: ease-in;
-    animation-duration: 5s;
+    animation-duration: 8s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
 }
@@ -878,6 +877,25 @@ FOOTER
     100% {
         color: var(--blue);
     }
+}
+
+.footer-contact{
+    background: #000;
+    width: 100%;
+    padding: .5rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+}
+.footer-contact a,
+.footer-nav a{
+    transition: .5s all;
+}
+.footer-contact a:hover,
+.footer-nav a:hover{
+    color: var(--blue);
 }
 
 
