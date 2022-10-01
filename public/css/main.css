@@ -19,17 +19,20 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 body::-webkit-scrollbar {
-    width: 8px;              
+    width: 8px;
 }
 body::-webkit-scrollbar-track {
-background: var(--white);       
+background: var(--white);
 }
 body::-webkit-scrollbar-thumb {
-background-color: #000;   
+background-color: #000;
 }
 /* ------------- */
 
-.btn-whatsapp{
+
+.btn-whatsapp img{
+    width: 60px;
+    height: auto;
     position: fixed;
     z-index: 9;
     bottom: 0;
@@ -37,20 +40,14 @@ background-color: #000;
     margin: 3.5%;
 }
 
-.btn-whatsapp img{
-    width: 60px;
-    height: auto;
-}
-.btn-whatsapp:hover{
-    cursor: pointer;
-}
+
 h3{
     color: #eee;
     font-size: 18px;
     font-weight: 400;
 }
 h2{
-    color: #eee;    
+    color: #eee;
     font-size: 20px;
     font-weight: 500;
 }
@@ -66,15 +63,15 @@ h1{
     font-size: 60px;
     font-weight: 500;
     line-height: 60px;
-    color: #eee;   
+    color: #eee;
 }
 p{
     line-height: 30px;
     font-size: 17px;
-    color: #eee;   
+    color: #eee;
 }
 
-/* 
+/*
 ------------------------------------------------------
 HEADER
 ------------------------------------------------------
@@ -114,7 +111,7 @@ HEADER
     }
 }
 
-/* 
+/*
 -------------
 Desktop
 -------------
@@ -128,21 +125,21 @@ Desktop
 .desktop-link{
     display: flex;
     gap: 20px;
-} 
+}
 .desktop-link .link .item{
     transition: .5s;
     padding: .5rem;
 }
-ul:hover li a{
+.desktop-link:hover li a{
     transform: scale(1.5);
     opacity: 0.2;
     filter: blur(5px);
 }
-ul li a:hover{
+.desktop-link li a:hover{
     opacity: 1;
     filter: blur(0);
 }
-ul li a:before{
+.desktop-link li a:before{
     content: '';
     position: absolute;
     top: 0; left: 0;
@@ -153,8 +150,8 @@ ul li a:before{
     transition: .5s;
     transform: scaleX(0);
     z-index: -1;
-}   
-ul li a:hover:before{
+}
+.desktop-link li a:hover:before{
     transition: transform 0.5s;
     transform:scaleX(1);
 }
@@ -172,7 +169,7 @@ ul li a:hover:before{
 
 }
 
-/* 
+/*
 ----------------
 Mobile Menu
 ----------------
@@ -180,7 +177,7 @@ Mobile Menu
 
 .navbar-mobile{
     display: none;
-} 
+}
 .mobile-open{
     display: flex;
     justify-content: space-between;
@@ -214,7 +211,7 @@ Mobile Menu
 }
 
 
-/* 
+/*
 ------------------------------------------------------
 Home Content
 ------------------------------------------------------
@@ -236,7 +233,7 @@ Home Content
     width: 600px;
     height: 600px;
     grid-column: 14;
-    grid-row: 4; 
+    grid-row: 4;
 
 }
 .home-img{
@@ -263,7 +260,7 @@ Home Content
     animation-duration: 9.9s;
     animation-iteration-count: infinite;
     animation-fill-mode: backwards;
-} 
+}
 /* Radius Animation */
 @keyframes radius-effect {
     0%{
@@ -273,12 +270,12 @@ Home Content
         border-radius: 30% 60% 70% 40% / 50% 60%;
     }
     75%{
-        border-radius: 50% 60% 40% 35% / 30% 50%;       
+        border-radius: 50% 60% 40% 35% / 30% 50%;
     }
 }
 
 /*
------------------------TEXT HOME---------------------- 
+-----------------------TEXT HOME----------------------
 */
 
 .home-text{
@@ -296,7 +293,7 @@ Home Content
     height: auto;
     display: flex;
     gap: 20px;
-    flex-direction: column;    
+    flex-direction: column;
 }
 
 .text .text-circle{
@@ -328,7 +325,7 @@ Home Content
         border-radius:  40% 70% 50% 80% / 80% 30% 40% 60%;
     }
     75%{
-        border-radius: 60% 30% 80% 30% / 50% 60%;       
+        border-radius: 60% 30% 80% 30% / 50% 60%;
     }
 }
 .btn-a{
@@ -348,11 +345,11 @@ Home Content
 
 /*
 ------------------------------------------------
-Responsive HOME 
+Responsive HOME
 ------------------------------------------------
 */
 @media screen and (max-width: 1165px) {
-    .home-radius{  
+    .home-radius{
         width: 580px;
         height: 580px;
         grid-column: 8;
@@ -381,10 +378,10 @@ Responsive HOME
     .home-content{
         height: 1200px;
         grid-template-rows: repeat(15, 73.3px);
-    } 
+    }
 }
 @media screen and (max-width: 1110px) {
-    .home-radius{  
+    .home-radius{
         width: 550px;
         height: 550px;
         grid-column: 8;
@@ -400,7 +397,7 @@ Responsive HOME
     h1{
         font-size: 45px;
     }
-    .home-radius{  
+    .home-radius{
         width: 400px;
         height: 400px;
         grid-column: 8;
@@ -418,7 +415,7 @@ Responsive HOME
     }
 }
 @media screen and (max-width: 500px) {
-    .home-radius{  
+    .home-radius{
         width: 400px;
         height: 400px;
         grid-column: 8;
@@ -430,7 +427,7 @@ Responsive HOME
     }
 }
 @media screen and (max-width: 415px) {
-    .home-radius{  
+    .home-radius{
         width: 330px;
         height: 330px;
         grid-column: 8;
@@ -442,7 +439,7 @@ Responsive HOME
         grid-column: 2/15;
         grid-row: 3;
     }
-    .home-radius{  
+    .home-radius{
         width: 280px;
         height: 280px;
         grid-column: 8;
@@ -567,12 +564,12 @@ Responsive HOME
 
 /*
 ------------------------------------------------
-Responsive SERVICES 
+Responsive SERVICES
 ------------------------------------------------
 */
 
 @media screen and (max-width: 1165px) {
-    
+
     .h1-translate{
         display: contents;
     }
@@ -598,7 +595,7 @@ Responsive SERVICES
 */
 
 
-/* 
+/*
 ------------------------------------------------------
 Projects Content
 ------------------------------------------------------
@@ -687,11 +684,11 @@ Projects Content
 }
 @keyframes moveIcon {
     0% {transform: translateY(0%);}
-    50% {transform: translateY(-20%);} 
+    50% {transform: translateY(-20%);}
 }
 .info-grid .illus{
     width: 500px;
-} 
+}
 
 
 
@@ -715,7 +712,7 @@ Projects Content
     .info-grid{
         grid-template-columns: repeat(2, 300px);
         display: grid;
-        grid-template-areas: 
+        grid-template-areas:
         "box1   box2"
         "box3   box4"
         "box5   box5"
@@ -745,13 +742,13 @@ Projects Content
     }
     .info-grid .illus{
         width: 300px;
-    } 
+    }
 }
 @media screen and (max-width: 670px) {
     .info-grid{
         grid-template-columns: repeat(1, 300px);
         display: grid;
-        grid-template-areas: 
+        grid-template-areas:
         "box1"
         "box2"
         "box3"
@@ -804,5 +801,112 @@ Projects Content
     .btn-whatsapp img{
         width: 50px;
         height: auto;
+    }
+}
+
+
+
+
+/*
+-----------------------------------------------------------------------------
+FOOTER
+-----------------------------------------------------------------------------
+*/
+
+.footer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.footer-icons{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding: 1rem;
+}
+.footer-icons img{
+    width: 40px;
+}
+.icons{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-nav ul{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding-bottom: 1rem;
+}
+.footer-nav ul li a{
+    color: #000;
+}
+.footer-logo{
+    background: #000;
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+}
+.footer-logo .mobile-logo h1{
+    animation-name: footerIcon;
+    color: var(--blue);
+    animation-timing-function: ease-in;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+@keyframes footerIcon {
+    0% {
+        color: var(--blue);
+    }
+    25% {
+        color: var(--white);
+    }
+    50% {
+        color: var(--deep-blue);
+    }
+    75% {
+        color: var(--white);
+    }
+    100% {
+        color: var(--blue);
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .footer-nav ul{
+        display: grid;
+        row-gap: 20px;
+        column-gap: 40px;
+        grid-template-areas: 
+        "ini servis"
+        "conta us";
+    }
+    .ini{
+        grid-area: ini;
+    }
+    .servis{
+        grid-area: servis;
+    }
+    .conta{
+        grid-area: conta;
+    } 
+    .us{
+        grid-area: us;
+    }
+    
+    .footer-nav ul{
+        flex-direction: column;
+    }
+    .footer-nav hr{
+        display: none;
     }
 }
