@@ -37,6 +37,11 @@ background-color: #000;
     bottom: 0;
     right: 0;
     margin: 3.5%;
+    transition: .5s all;
+}
+.btn-whatsapp img:hover,
+.icons img:hover{
+    transform: scale(1.1);
 }
 h3{
     color: #eee;
@@ -453,14 +458,16 @@ Responsive HOME
 .h1-translate{
     display: block;
 }
-.services-content{
+.services-content,
+.aboutus-content{
     display: grid;
     grid-template-columns: repeat(15, 1fr);
     grid-template-rows: repeat(4, minmax(110px, auto));
     position: relative;
     background: rgba(0, 0, 0, .6);
 }
-.services-content::before{
+.services-content::before,
+.aboutus-content::before{
     content: '';
     top: 0;left: 0;right: 0;bottom: 0;
     position: absolute;
@@ -584,14 +591,6 @@ Responsive SERVICES
     }
 }
 
-
-/*
------------------------
------------------END----------------------
------------------------
-*/
-
-
 /*
 ------------------------------------------------------
 Projects Content
@@ -637,7 +636,6 @@ Projects Content
     color: var(--blue);
     font-size: 18px;
 }
-
 .info-grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -646,7 +644,6 @@ Projects Content
     align-items: center;
     gap: 50px;
 }
-
 .illus{
     grid-column: 2;
     grid-row: 3;
@@ -661,7 +658,6 @@ Projects Content
 .info-footer a{
     width: 230px !important;
 }
-
 .info-box{
     width: 300px;
     height: 200px;
@@ -670,11 +666,10 @@ Projects Content
     border-radius: .5rem;
     backdrop-filter: blur(2px);
 }
-
 .info-box img{
     width: 80px;
     animation-name: moveIcon;
-    animation-duration: 4s;
+    animation-duration: 7.5s;
     animation-iteration-count: infinite;
     animation-fill-mode: backwards;
     animation-play-state: running;
@@ -686,7 +681,6 @@ Projects Content
 .info-grid .illus{
     width: 500px;
 }
-
 
 
 @media screen and (max-width: 1180px) {
@@ -770,7 +764,7 @@ Projects Content
     }
     .contact{
         height: 2100px;
-        grid-template-rows: 56.6px 56.6px repeat(14, 100px) ;
+        grid-template-rows: 56.6px 24px repeat(14, 100px) ;
     }
     .contact-text{
         grid-row: 3;
@@ -800,6 +794,15 @@ Projects Content
         height: auto;
     }
 }
+
+
+/*
+-----------------------------------------------------------------------------
+About US
+-----------------------------------------------------------------------------
+*/
+
+
 
 
 
@@ -833,6 +836,9 @@ FOOTER
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.icons img{
+    transition: .5s all;
 }
 .footer-nav ul{
     display: flex;
@@ -878,7 +884,6 @@ FOOTER
         color: var(--blue);
     }
 }
-
 .footer-contact{
     background: #000;
     width: 100%;
@@ -897,8 +902,6 @@ FOOTER
 .footer-nav a:hover{
     color: var(--blue);
 }
-
-
 @media screen and (max-width: 480px) {
     .footer-nav ul{
         display: grid;
