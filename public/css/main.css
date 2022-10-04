@@ -78,9 +78,26 @@ p{
 HEADER
 ------------------------------------------------------
 */
+.desktop-logo img,
+.mobile-logo img{
+    width: 120px;
+    user-select: none;
+    filter: invert(69%) sepia(85%) saturate(4000%) hue-rotate(165deg) brightness(90%) contrast(100%);
+}
+.mobile-logo img{
+    width: 80px;
+}
+.desktop-logo,
+.mobile-logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;    
+}
+
 
 .desktop-logo h1,
 .mobile-logo h1{
+    margin-left: -10px;
     font-size: 45px;
     user-select: none;
     font-family: 'Blade Runner Movie Font';
@@ -90,7 +107,7 @@ HEADER
     position: absolute;
     z-index: 2;
     background: #000;
-    height: auto;
+    height: 110px;
     padding: 1.5rem 0rem 1.5rem 0rem;
     border-bottom: var(--blue) 3px solid;
     animation: border-color;
@@ -120,6 +137,7 @@ Desktop
 */
 
 .navbar-desktop{
+    height: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -166,7 +184,7 @@ Desktop
         justify-content: space-between;
     }
     .header{
-        padding: 1.5rem 2.5rem;
+        padding: 1rem 1rem;
     }
 
 }
@@ -184,7 +202,6 @@ Mobile Menu
     display: flex;
     justify-content: space-between;
     align-items: center;
-    align-items: flex-end;
 }
 .mobile-menu{
     display: none;
@@ -204,6 +221,9 @@ Mobile Menu
 
 @media screen and (max-width: 750px) {
     /* Hidden Desktop Show Mobile*/
+    .header{
+        height: auto;
+    }
     .navbar-desktop{
         display: none;
     }
