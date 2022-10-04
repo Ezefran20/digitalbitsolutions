@@ -82,7 +82,7 @@ HEADER
 .mobile-logo img{
     width: 120px;
     user-select: none;
-    filter: invert(69%) sepia(85%) saturate(4000%) hue-rotate(165deg) brightness(90%) contrast(100%);
+    filter: invert(69%) sepia(75%) saturate(4000%) hue-rotate(165deg) brightness(90%) contrast(100%);
 }
 .mobile-logo img{
     width: 80px;
