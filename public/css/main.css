@@ -6,16 +6,19 @@
 @font-face {
     font-family: 'Blade Runner Movie Font';
     src: url('/public/fonts/BLADRMF_.TTF');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Open Sans 400';
     src: url('/public/fonts/OpenSans-Regular.ttf');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Open Sans 500';
-    src: url('/public/fonts/OpenSans_Condensed-Medium.ttf')
+    src: url('/public/fonts/OpenSans_Condensed-Medium.ttf');
+    font-display: swap;    
 }
 
 :root{
