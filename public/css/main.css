@@ -6,8 +6,19 @@
 @font-face {
     font-family: 'Blade Runner Movie Font';
     src: url('/public/fonts/BLADRMF_.TTF');
-    font-display: swap;
 }
+
+@font-face {
+    font-family: 'Poppins 400';
+    src: url('/public/fonts/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins 500';
+    src: url('/public/fonts/Poppins-Medium.ttf');
+}
+
+
 :root{
     --white: #fff;
     --blue: #29abe2;
@@ -29,7 +40,14 @@ body::-webkit-scrollbar-thumb {
 background-color: #000;
 }
 /* ------------- */
-
+h1,
+h2,
+h3{
+    font-family: 'Poppins 500';
+}
+p{
+    font-family: 'Poppins 400';
+}
 .btn-whatsapp img{
     width: 60px;
     height: auto;
@@ -490,7 +508,8 @@ Responsive HOME
     content: '';
     top: 0;left: 0;right: 0;bottom: 0;
     position: absolute;
-    background: #000;
+   /* background-image: url(/public/img/bg.jpg);*/
+    background-color: black;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -574,7 +593,6 @@ Responsive HOME
 }
 .services-box img{
     width: 80px;
-    height: 80px;
 }
 .services-box:hover{
     transform: scale(1.05);
