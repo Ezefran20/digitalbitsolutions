@@ -9,15 +9,14 @@
 }
 
 @font-face {
-    font-family: 'Poppins 400';
-    src: url('/public/fonts/Poppins-Regular.ttf');
+    font-family: 'Open Sans 400';
+    src: url('/public/fonts/OpenSans-Regular.ttf');
 }
 
 @font-face {
-    font-family: 'Poppins 500';
-    src: url('/public/fonts/Poppins-Medium.ttf');
+    font-family: 'Open Sans 500';
+    src: url('/public/fonts/OpenSans_Condensed-Medium.ttf')
 }
-
 
 :root{
     --white: #fff;
@@ -43,10 +42,10 @@ background-color: #000;
 h1,
 h2,
 h3{
-    font-family: 'Poppins 500';
+    font-family: 'Open Sans 500';
 }
 p{
-    font-family: 'Poppins 400';
+    font-family: 'Open Sans 400';
 }
 .btn-whatsapp img{
     width: 60px;
@@ -64,24 +63,24 @@ p{
 }
 h3{
     color: #eee;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 400;
 }
 h2{
     color: #eee;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 500;
 }
 a{
     text-decoration: none;
     color: #eee;
-    font-size: 18px;
+    font-size: 22px;
 }
 ul{
     list-style-type: none;
 }
 h1{
-    font-size: 60px;
+    font-size: 70px;
     font-weight: 500;
     line-height: 60px;
     color: #eee;
@@ -667,13 +666,13 @@ Projects Content
     text-align: center;
 }
 .info-text h2{
-    font-size: 25px;
+    font-size: 30px;
     color: #eee;
     margin-bottom: 1.5rem;
 }
 .info-text h2 span{
     color: var(--blue);
-    font-size: 18px;
+    font-size: 25px;
 }
 .info-grid{
     display: grid;
@@ -817,15 +816,15 @@ Projects Content
     .text-projects p,
     .text-grid p,
     .text p{
-         font-size: 16px;
+         font-size: 20px;
          line-height: 25px;
     }
     .info-text h2   {
-        font-size: 22px;
+        font-size: 25px;
     }
     .info-text h2 span{
         display: block;
-        font-size: 16px;
+        font-size: 20px;
         line-height: 25px;
     }
     .btn-whatsapp img{
@@ -874,7 +873,7 @@ About US
 }
 
 .about-text p{
-    font-size:  25px;
+    font-size:  30px;
     line-height: 50px;
     padding: 1rem;    
     background-color: rgba(33,26,78,.5);
@@ -903,7 +902,10 @@ About US
     .aboutus-content{
         height: 700px;
     }
-    
+    .about-text p{
+        font-size:  25px;
+        line-height: 40px;
+    }
     .about-text{
         grid-column: 2/15;
         grid-row: 5;
@@ -933,10 +935,12 @@ About US
     .aboutus-content{
         height: 900px;
     }
-    
+    .about-text p{
+        line-height: 50px;
+    }
     .about-text{
         grid-column:2/15;
-        grid-row: 8;
+        grid-row: 7;
     }
     .aboutus-content .aboutus-text{
         grid-row: 3;
@@ -944,9 +948,6 @@ About US
     }
 }
 @media screen and  (max-width: 395px ) {
-    .aboutus-content{
-        height: 1100px;
-    }
     .aboutus-content .aboutus-text{
         grid-row: 4;
         grid-column: 4/16;
@@ -959,11 +960,20 @@ About US
     .footer-contact a{
         font-size: 16px;
     }
-}
-@media screen and  (max-width: 325px ) {
+    .about-text p{
+        font-size:  26px;
+        line-height: 50px;
+    }
     .aboutus-content{
         height: 1200px;
     }
+    
+}
+@media screen and  (max-width: 325px ) {
+    .aboutus-content{
+        height: 1250px;
+    }
+    
 }
 /*
 -----------------------------------------------------------------------------
