@@ -571,8 +571,12 @@ Responsive HOME
 .text-grid{
     width: 100%;
 }
-.services-box img{
+.services-box div{
     width: 80px;
+    height: 80px;
+}
+.services-box img{
+width: auto;
 }
 .services-box:hover{
     transform: scale(1.05);
