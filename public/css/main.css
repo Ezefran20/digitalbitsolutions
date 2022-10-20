@@ -6,6 +6,7 @@
 @font-face {
     font-family: 'Blade Runner Movie Font';
     src: url('/public/fonts/BLADRMF_.TTF');
+    font-display: swap;
 }
 :root{
     --white: #fff;
