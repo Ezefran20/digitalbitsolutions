@@ -390,13 +390,17 @@ Home Content
 Responsive HOME
 ------------------------------------------------
 */
-@media screen and (max-width: 1165px) {
+
+@media screen and (max-width: 1200px) {
     .home-radius{
         width: 580px;
         height: 580px;
         grid-column: 8;
-        grid-row: 8;
+        grid-row: 9;
     }
+}
+
+@media screen and (max-width: 1165px) {
     .text{
         width: 100%;
     }
@@ -422,12 +426,13 @@ Responsive HOME
         grid-template-rows: repeat(15, 73.3px);
     }
 }
+
 @media screen and (max-width: 1110px) {
     .home-radius{
         width: 550px;
         height: 550px;
         grid-column: 8;
-        grid-row: 9;
+        grid-row: 8;
     }
     .home-text{
         grid-column: 2/15;
@@ -443,7 +448,7 @@ Responsive HOME
         width: 400px;
         height: 400px;
         grid-column: 8;
-        grid-row: 12;
+        grid-row: 11;
     }
     .home-text{
         text-align: center;
@@ -473,7 +478,7 @@ Responsive HOME
         width: 330px;
         height: 330px;
         grid-column: 8;
-        grid-row: 15;
+        grid-row: 12;
     }
 }
 @media screen and (max-width: 360px) {
@@ -482,10 +487,14 @@ Responsive HOME
         grid-row: 3;
     }
     .home-radius{
+        margin-top: 3rem;
         width: 280px;
         height: 280px;
         grid-column: 8;
-        grid-row: 15;
+        grid-row: 11;
+    }
+    .home-content{
+        height: 1000px;
     }
 }
 
